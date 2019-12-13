@@ -67,7 +67,9 @@ To make changes to the database schema follow these steps:
 
     `PM> $env:MYSQL_CONNECTION_STRING="server=..."`. 
 
-4. Run `add-migration <migration name>` in Package Manager. If you receive an error that the ConnectionString from the previous step could not be read, try setting it again (setting environment variables in PM might be a bit buggy, not sure).
+4. Run `add-migration <migration name>` in Package Manager. 
+If you receive an error that the ConnectionString from the previous step could not be read or "Unable to resolve service for type 'Microsoft.EntityFrameworkCore.Migrations.IMigrator'",
+try setting it again (setting environment variables in PM might be a bit buggy, not sure).
 5. Modify the `Up()` and `Down()` method in the newly created migration in Database if necessary.
 6. Run `update-database` in Package Manager to update your local database.
 
