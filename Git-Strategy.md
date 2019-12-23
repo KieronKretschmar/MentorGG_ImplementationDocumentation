@@ -54,7 +54,7 @@ Iterate over each *hunk* (change) and decide whether to **un**stage it or not.
 
 Apart from the initial Commit, the `master` branch should never be directly pushed to.
 
-It should only ever be modified after a (Release)[] branch has had a successful (Merge Review)[..].
+It should only ever be modified after a [Release](#release-branches) branch has had a successful [Merge Review](#merge-reviews).
 
 ### Intial Commit
 
@@ -67,7 +67,7 @@ At a minimum, the initial Commit should contain:
 
 A Release Branch should be created as soon as a repository requires functionality.
 
-Similar to the `master` branch, a release branch should never be directly pushed to and only modified after a successful (Feature)[..] branch has had a successful (Merge Review)[..].
+Similar to the `master` branch, a release branch should never be directly pushed to and only modified after a successful [Feature](#feature-brances) branch has had a successful [Merge Review](#merge-reviews).
 
 ## Naming
 
@@ -75,16 +75,16 @@ Releases are to be named `release/x.x.x` where `x.x.x` coralates to `Major.Minor
 
 Example: `release/0.2.2`
 
-See (Semantic Versioning)[..]
+See [Semantic Versioning](#semantic-versioning)
 
 ## Feature Branches
 
 A Feature Branch is where *all* of your commits will live.
 
 Usually, a feature branch will have only one active developer, this prevents any gridlock.
-If a developer requires your current changes that are not yet merged, see (Rebasing)
+If a developer requires your current changes that are not yet merged, see [Rebasing](#rebasing).
 
-After you have successfully implemented a new feature, submit a (Merge Review)[..].
+After you have successfully implemented a new feature, submit a [Merge Review](#merge-reviews).
 
 ### Naming
 
@@ -102,7 +102,7 @@ A Merge Review is the perfect place for knowledge sharing, discussion, and feedb
 
 A review has at minimum two parties, an author and a reviewer.
 
-## The Reviewer(s)
+### The Reviewer(s)
 
 It is a reviewer's responsibility to ensure:
 
@@ -111,12 +111,11 @@ It is a reviewer's responsibility to ensure:
 - Relevant changes to Readme / Documentation have been made.
 - The spelling is correct.
 - Naming is accurate and consistent.
-
 - **Merging**, Once all issues have been resolved and the above criteria met.
 
 If any of these requirements are not met, the author should leave a comment referencing the exact issue.
 
-## The Author(s)
+### The Author(s)
 
 Is it an author's responsibility to:
 
@@ -125,12 +124,16 @@ Is it an author's responsibility to:
 - Make / Contest requested changes.
 - Respond to all critique and resolve all concerns.
 
-### All Comments must be constructive, neutral and relevant to the proposed change.
+### All comments must be constructive, neutral and relevant to the proposed change.
 
 ## Merging Releases
 
-When conducting a review of a (Release)[..] the Reviewer has an important task to complete before merging - Tagging.
+When conducting a review of a [Release](#release-branches) the Reviewer has an important task to complete before merging - [Tagging](#tagging-a-release).
 
 ---
 
-# Releases / Tagging
+# Releases
+
+## Tagging a Release
+
+## Semantic Versioning
