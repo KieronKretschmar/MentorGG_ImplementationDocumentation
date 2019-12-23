@@ -22,6 +22,7 @@ You have modified the `.gitignore` to ignore Visual Studio 2019 generated files.
 
 Helpful: 
 - `Ignore Visual Studio 2019 generated files`
+
 Bad: 
 - `updated gitignore`
 - `Adds .vs to gitignore`
