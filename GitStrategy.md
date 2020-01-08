@@ -38,14 +38,15 @@ If you have the opportunity, stage and commit your changes as you go -
 This will break down the git work into smaller, more manageable c**hunks**, 
 This will also give you the added benefit of version control before you've pushed to the remote.
 
-Iterate over each *hunk* (change) and decide whether to stage it or not.
+```bash
 
-### Unstage files with `--patch`
+# Iterate over each *hunk* (change) and decide whether to stage it or not.
+$ git add --patch <file/dir>
 
-- `git reset -p <file>`
-- `git reset --patch <file>`
+# Iterate over each *hunk* (change) and decide whether to unstage it or not.
+$ git reset --patch <file/dir>
 
-Iterate over each *hunk* (change) and decide whether to **un**stage it or not.
+```
 
 ---
 
