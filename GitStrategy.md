@@ -125,7 +125,7 @@ Is it an author's responsibility to:
 - Make / Contest requested changes.
 - Respond to all critique and resolve all concerns.
 
-### All comments must be constructive, neutral and relevant to the proposed change.
+**All comments must be constructive, neutral and relevant to the proposed change.**
 
 ## Merging Releases
 
