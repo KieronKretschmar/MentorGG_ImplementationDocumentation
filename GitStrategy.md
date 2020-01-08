@@ -69,13 +69,14 @@ At a minimum, the initial Commit should contain:
 
 A Release Branch should be created as soon as a repository requires functionality.
 
-Similar to the `master` branch, a release branch should never be directly pushed to and only modified after a successful [Feature](#feature-brances) branch has had a successful [Merge Review](#merge-reviews).
+Similar to the `master` branch, a release branch should never be directly pushed to and only 
+modified after a successful [Feature](#feature-branches) branch has had a successful [Merge Review](#merge-reviews).
 
 ## Naming
 
-Releases are to be named `release/x.x.x` where `x.x.x` coralates to `Major.Minor.Patch` version numbers.
+**Name Format**: `release/MAJOR.MINOR.PATCH` 
 
-Example: `release/0.2.2`
+The `/` indicates this is a working branch.
 
 See [Semantic Versioning](#semantic-versioning)
 
