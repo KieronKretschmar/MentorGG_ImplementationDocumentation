@@ -139,4 +139,24 @@ When conducting a review of a [Release](#release-branches) the Reviewer has an i
 
 ## Tagging a Release
 
+**Tag Format**: `release-MAJOR.MINOR.PATCH`
+
+To create a release tag run the following commands in a terminal:
+
+```bash
+# Create the tag on your local machine
+$ git tag -a release-1.2.3 -m "Release 1.2.3"
+
+# Push the newly created tag to the origin
+$ git push origin release-1.2.3
+```
 ## Semantic Versioning
+
+Given a version number `MAJOR.MINOR.PATCH`, increment the:
+
+- `MAJOR` version when you make incompatible API changes,
+- `MINOR` version when you add functionality in a backwards compatible manner
+- `PATCH` version when you make backwards compatible bug fixes.
+
+
+[Further Reading](https://semver.org/)
