@@ -39,7 +39,6 @@ This will break down the git work into smaller, more manageable c**hunks**,
 This will also give you the added benefit of version control before you've pushed to the remote.
 
 ```bash
-
 # Iterate over each *hunk* (change) and decide whether to stage it or not.
 $ git add --patch <file/dir>
 
