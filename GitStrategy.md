@@ -27,16 +27,16 @@ Bad:
 - *"updated gitignore"*
 - *"Adds .vs to gitignore"*
 
+
+```bash
+$ git commit -m "Ignore Visual Studio 2019 generated files"
+```
+
 ## Preparation / Staging your changes
 
-If you have the opportunity, stage and commit your changes as you go - This will break down the git work into smaller, more manageable c**hunks**, This will also give you the added benefit of version control before you've pushed to the remote.
-
-Useful commands:
-
-### Stage files with `--patch`
-
-- `git add -p <file>`
-- `git add --patch <file>`
+If you have the opportunity, stage and commit your changes as you go - 
+This will break down the git work into smaller, more manageable c**hunks**, 
+This will also give you the added benefit of version control before you've pushed to the remote.
 
 Iterate over each *hunk* (change) and decide whether to stage it or not.
 
