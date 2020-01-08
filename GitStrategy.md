@@ -4,7 +4,7 @@ Having a clear strategy of how we use version control at Mentor will:
 
 - Reduce common pain points when collaborating with team members on the same project.
 - Create a reliable and auditable history of projects.
-- Increase transpencry and encourage knowledge sharing.
+- Increase transparency and encourage knowledge sharing.
 
 ---
 
