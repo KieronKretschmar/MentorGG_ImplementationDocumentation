@@ -119,7 +119,7 @@ If any of these requirements are not met, the author should leave a comment refe
 
 ### The Author(s)
 
-Is it an author's responsibility to:
+It is an author's responsibility to:
 
 - Write a summary of the included changes in the Merge Request description.
 - Assign an appropriate Reviewer.
