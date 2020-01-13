@@ -66,7 +66,7 @@ At a minimum, the initial Commit should contain:
 
 ## Release Branches
 
-A Release Branch should be created as soon as a repository requires functionality.
+A Release Branch should be created as soon as implementation of new functionality begins.
 
 Similar to the `master` branch, a release branch should never be directly pushed to and only 
 modified after a successful [Feature](#feature-branches) branch has had a successful [Merge Review](#merge-reviews).
