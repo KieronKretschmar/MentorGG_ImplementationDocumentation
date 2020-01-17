@@ -80,9 +80,12 @@ try setting it again (setting environment variables in PM might be a bit buggy, 
 5. Modify the `Up()` and `Down()` method in the newly created migration in Database if necessary.
 6. Run `update-database` in Package Manager to update your local database.
 
+### Conventions
+#### Fluent API
+We are using the [Fluent API][Fluent API Docs] where possible to configure the model, avoiding the usage of attributes for database configuration in `Entities`.
 
 
-
+[Fluent API Docs]: https://www.learnentityframeworkcore.com/configuration/fluent-api
 [EFCF]: https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database
 [CFM]: https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/
 [EFCFCC]: https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database#3-create-a-context
