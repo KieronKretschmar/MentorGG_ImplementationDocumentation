@@ -71,7 +71,7 @@ A Release Branch should be created as soon as implementation of new functionalit
 Similar to the `master` branch, a release branch should never be directly pushed to and only 
 modified after a successful [Feature](#feature-branches) branch has had a successful [Merge Review](#merge-reviews).
 
-## Naming
+### Naming
 
 **Name Format**: `release/MAJOR.MINOR.PATCH` 
 
