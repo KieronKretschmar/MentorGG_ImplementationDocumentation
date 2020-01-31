@@ -157,5 +157,19 @@ Given a version number `MAJOR.MINOR.PATCH`, increment the:
 - `MINOR` version when you add functionality in a backwards compatible manner
 - `PATCH` version when you make backwards compatible bug fixes.
 
+---
+
+# Submodules
+
+When adding dependencies as submodules with 
+
+```
+$ git submodule add <url> <directory>
+```
+
+make sure to 
+- specify `<url>` using SSH ("git@gitlab.com/...") instead of HTTPS
+- make sure that `<directory>` is written in the same case as the original repo (should be CamelCase) 
+
 
 [Further Reading](https://semver.org/)
