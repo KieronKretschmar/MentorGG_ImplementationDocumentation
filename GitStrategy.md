@@ -130,7 +130,7 @@ It is an author's responsibility to:
 
 ## Merging Releases
 
-When conducting a review of a [Release](#release-branches) the Reviewer has an important task to complete before merging - [Tagging](#tagging-a-release).
+When conducting a review of a [Release](#release-branches) the Author has an important task to complete after merging - [Tagging](#tagging-a-release).
 
 ---
 
