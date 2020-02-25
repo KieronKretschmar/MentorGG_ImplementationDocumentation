@@ -20,11 +20,12 @@ public class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
-                services.AddHostedService<Worker>();
-
-                services.AddLogging(o =>
+                services.AddLogging(options =>
                 {
-                    o.AddConsole();
+                    options.AddConsole(o =>
+                    {
+                        o.TimestampFormat = "[yyyy-MM-dd HH:mm:ss zzz] ";
+                    });
                 });
             });
 }
