@@ -1,4 +1,4 @@
-# Implementation
+## Implementation
 
 Collection of code snippets and design practices.
 
@@ -13,5 +13,5 @@ Collection of code snippets and design practices.
 
 - [Docker Registry](DockerRegistry.md)
 - [Git Strategy](GitStrategy.md)
-
+- [Azure Blob Storage](BlobStorage.md)
 
