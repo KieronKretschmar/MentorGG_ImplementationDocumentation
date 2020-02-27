@@ -23,7 +23,7 @@ $ az acr login --name mentorgg
 When building an image, tag it using the following structure: `mentorgg.azurecr.io/[REPO][:VERSION]`. 
 Build and tag in one step using this syntax:
 ```
-docker build . mentorgg.azurecr.io/[REPO][:VERSION]
+docker build . -t mentorgg.azurecr.io/[REPO][:VERSION]
 ```
 
 
