@@ -8,6 +8,7 @@ Collection of code snippets and design practices.
 - [Logging](Logging.md)
 - [Testing](Testing.md)
 - [API Documentation](APIDocumentation.md)
+- [Dependency Injection](DependencyInjection.md)
 
 ## Tools
 
