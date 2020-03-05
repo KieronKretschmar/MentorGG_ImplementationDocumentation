@@ -1,14 +1,14 @@
 # Pipelines
 
-To ensure only replicatable builds reach our staging and production enviroments we must use Continuues Intergration (CI) to build and publish images of our containerized applications.
+To ensure only replicable builds reach our staging and production enviroments we must use Continuous Intergration (CI) to build and publish images of our containerized applications.
 
 ## Adding CI to a project
 
-### 1. Ensure submodules are using a reletive path.
+### 1. Ensure submodules are using a reletive path
 
 - https://docs.gitlab.com/ee/ci/git_submodules.html
 
-### 2. Add Azure Container Registry (ACR) Enviroment Variables to Gitlab.
+### 2. Add Azure Container Registry (ACR) Enviroment Variables to Gitlab
 
 Add the following Enviroment Variables:
 
@@ -20,7 +20,7 @@ Mark all variables as **Protected** and **Mask** `ACR_PASSWORD`.
 
 ![alt text](./Images/ci_vars.png "Gitlab Enviroment Variable Setup")
 
-### 3. Add a `.gitlab-ci.yml` in the root directory.
+### 3. Add a `.gitlab-ci.yml` in the root directory
 
 Here is an example `publish` stage which will only execute on tags beggining with `release-`.
 This pipeline, when executed will build and push an image to a pre-defined Azure Container Registry.
