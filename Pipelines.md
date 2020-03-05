@@ -1,0 +1,72 @@
+# Pipelines
+
+To ensure only replicatable builds reach our staging and production enviroments we must use Continuues Intergration (CI) to build and publish images of our containerized applications.
+
+## Adding CI to a project
+
+### 1. Ensure submodules are using a reletive path.
+
+- https://docs.gitlab.com/ee/ci/git_submodules.html
+
+### 2. Add Azure Container Registry (ACR) Enviroment Variables to Gitlab.
+
+Add the following Enviroment Variables:
+
+- `ACR_HOST`: `mentorgg.azurecr.io`
+- `ACR_PASSWORD`: *Consult DevOps*
+- `ACR_USER`: *Consult DevOps*
+
+Mark all variables as **Protected** and **Mask** `ACR_PASSWORD`.
+
+![alt text](./Images/ci_vars.png "Gitlab Enviroment Variable Setup")
+
+### 3. Add a `.gitlab-ci.yml` in the root directory.
+
+Here is an example `publish` stage which will only execute on tags beggining with `release-`.
+This pipeline, when executed will build and push an image to a pre-defined Azure Container Registry.
+
+```yml
+image: docker:stable
+
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+
+stages:
+    - release
+
+release:
+
+    # ENVIROMENT REQUIREMENTS IN GITLAB CI SETTINGS
+    # ACR_HOST - Hostname of the Azure container registry
+    # ACR_USER - User to authenticate with the registry
+    # ACR_PASSWORD - Password to authenticate with the registry
+
+    stage: release
+    only:
+        - /^release-.*$/
+
+    # Select Docker in Docker for Gitlab Shared Runners
+    services:
+        - docker:dind
+
+    before_script:
+        - docker info
+
+    script:
+        # Split the release tag into the semantic version number
+        # eg. from `release-1.2.3` to `1.2.3`
+        - SEMVER=$(echo $CI_COMMIT_TAG | cut -d "-" -f2)
+        # Combine variables to the final image tag
+        - IMAGE_TAG=$ACR_HOST/$CI_PROJECT_NAME:$SEMVER
+        # Build the image
+        - docker build --tag $IMAGE_TAG .
+        # Login to the ACR containe registry
+        - docker login $ACR_HOST -u $ACR_USER -p $ACR_PASSWORD
+        # Push the image
+        - docker push $IMAGE_TAG
+```
+
+### 4. Push a release tag!
+
+![alt test](./Images/ci_success.png "Example Success Pipeline")
+
