@@ -1,6 +1,9 @@
-## Implementation
+# Implementation
 
 Collection of code snippets and design practices.
+
+## Automation
+- [Pipelines](Pipelines.md)
 
 ## Services
 
