@@ -8,19 +8,7 @@ To ensure only replicable builds reach our staging and production enviroments we
 
 - https://docs.gitlab.com/ee/ci/git_submodules.html
 
-### 2. Add Azure Container Registry (ACR) Enviroment Variables to Gitlab
-
-Add the following Enviroment Variables:
-
-- `ACR_HOST`: `mentorgg.azurecr.io`
-- `ACR_PASSWORD`: *Consult DevOps*
-- `ACR_USER`: *Consult DevOps*
-
-Mark all variables as **Protected** and **Mask** `ACR_PASSWORD`.
-
-![alt text](./Images/ci_vars.png "Gitlab Enviroment Variable Setup")
-
-### 3. Add a `.gitlab-ci.yml` in the root directory
+### 2. Add a `.gitlab-ci.yml` in the root directory
 
 Here is an example `publish` stage which will only execute on tags beggining with `release-`.
 This pipeline, when executed will build and push an image to a pre-defined Azure Container Registry.
@@ -66,7 +54,25 @@ release:
         - docker push $IMAGE_TAG
 ```
 
-### 4. Push a release tag!
+### 3. Push a release tag!
 
 ![alt test](./Images/ci_success.png "Example Success Pipeline")
+
+
+## Configuration (Gitlab Level)
+
+This configuration should already be applied, this is for reference.
+
+### Add Azure Container Registry (ACR) Enviroment Variables to Gitlab groups
+
+Add the following Enviroment Variables:
+
+- `ACR_HOST`: `mentorgg.azurecr.io`
+- `ACR_PASSWORD`: *Consult DevOps*
+- `ACR_USER`: *Consult DevOps*
+
+Mark all variables as **Protected** and **Mask** `ACR_PASSWORD`.
+
+![alt text](./Images/ci_vars.png "Gitlab Enviroment Variable Setup")
+
 
