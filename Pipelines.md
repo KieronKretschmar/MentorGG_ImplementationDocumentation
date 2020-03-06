@@ -1,12 +1,19 @@
 # Pipelines
 
-To ensure only replicable builds reach our staging and production enviroments we must use Continuous Intergration (CI) to build and publish images of our containerized applications.
+To ensure only replicable builds reach our staging and production environments, we must use Continuous Intergration (CI) to build and publish images of our containerized applications.
 
 ## Adding CI to a project
 
-### 1. Ensure submodules are using a reletive path
+### 1. Ensure submodules are using a relative path
 
 - https://docs.gitlab.com/ee/ci/git_submodules.html
+
+Example
+```
+[submodule "rabbitcommunicationlib"]
+	path = rabbitcommunicationlib
+	url = ../../engine/RabbitCommunicationLib.git
+```
 
 ### 2. Add a `.gitlab-ci.yml` in the root directory
 
@@ -24,7 +31,7 @@ stages:
 
 release:
 
-    # ENVIROMENT REQUIREMENTS IN GITLAB CI SETTINGS
+    # ENVIRONMENT REQUIREMENTS IN GITLAB CI SETTINGS
     # ACR_HOST - Hostname of the Azure container registry
     # ACR_USER - User to authenticate with the registry
     # ACR_PASSWORD - Password to authenticate with the registry
@@ -48,7 +55,7 @@ release:
         - IMAGE_TAG=$ACR_HOST/$CI_PROJECT_NAME:$SEMVER
         # Build the image
         - docker build --tag $IMAGE_TAG .
-        # Login to the ACR containe registry
+        # Login to the ACR container registry
         - docker login $ACR_HOST -u $ACR_USER -p $ACR_PASSWORD
         # Push the image
         - docker push $IMAGE_TAG
@@ -63,9 +70,9 @@ release:
 
 This configuration should already be applied, this is for reference.
 
-### Add Azure Container Registry (ACR) Enviroment Variables to Gitlab groups
+### Add Azure Container Registry (ACR) Environment Variables to Gitlab groups
 
-Add the following Enviroment Variables:
+Add the following Environment Variables:
 
 - `ACR_HOST`: `mentorgg.azurecr.io`
 - `ACR_PASSWORD`: *Consult DevOps*
@@ -73,6 +80,6 @@ Add the following Enviroment Variables:
 
 Mark all variables as **Protected** and **Mask** `ACR_PASSWORD`.
 
-![alt text](./Images/ci_vars.png "Gitlab Enviroment Variable Setup")
+![alt text](./Images/ci_vars.png "Gitlab Environment Variable Setup")
 
 
