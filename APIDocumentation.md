@@ -67,6 +67,14 @@ public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
+Set `GenerateDocumentationFile` to true in your `<project>.csproj` like this
+```
+  <PropertyGroup>
+    ...
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+```
+
 Finally,
 
 - Ensure **every** REST endpoint it documented with XML comments
