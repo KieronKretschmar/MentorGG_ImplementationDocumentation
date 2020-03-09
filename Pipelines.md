@@ -14,7 +14,6 @@ Recret enviroment variables such as the Azure Container Registry key are only ex
 
 - https://docs.gitlab.com/ee/ci/git_submodules.html
 
-Example
 ```
 [submodule "rabbitcommunicationlib"]
 	path = rabbitcommunicationlib
