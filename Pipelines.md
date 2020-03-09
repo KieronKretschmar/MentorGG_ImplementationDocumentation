@@ -6,7 +6,7 @@ To ensure only replicable builds reach our staging and production environments, 
 
 ### Prerequisutes
 
-Secret enviroment variables are only exposed to protected tags and branches, Ensure that `release-*` tags are protected in your project.
+Secret environment variables are only exposed to protected tags and branches, Ensure that `release-*` tags are protected in your project.
 
 ![alt test](./Images/protected_tags.png "Gitlab Protected Tags")
 
