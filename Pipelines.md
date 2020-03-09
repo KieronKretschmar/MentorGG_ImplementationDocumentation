@@ -4,6 +4,12 @@ To ensure only replicable builds reach our staging and production environments, 
 
 ## Adding CI to a project
 
+### Prerequisutes
+
+Recret enviroment variables such as the Azure Container Registry key are only exposed to protected tags and pipelines, Ensure that `release-*` tags are protected in your project.
+
+![alt test](./Images/protected_tags.png "Gitlab Protected Tags")
+
 ### 1. Ensure submodules are using a relative path
 
 - https://docs.gitlab.com/ee/ci/git_submodules.html
