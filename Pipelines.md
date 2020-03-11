@@ -29,7 +29,7 @@ This pipeline, when executed will build and push an image to a pre-defined Azure
 image: docker:stable
 
 variables:
-  GIT_SUBMODULE_STRATEGY: normal
+  GIT_SUBMODULE_STRATEGY: recursive
 
 stages:
     - release
