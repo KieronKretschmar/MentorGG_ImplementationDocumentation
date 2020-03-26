@@ -6,11 +6,34 @@
     Terminal Consone for Kubernetes, useful for quickly browsing logs.
 
 
+## RabbitMq Admin CLI
 
+### Install
+
+```shell
+# Firstly, portforward the rabbitmq instance to your localmachine
+# This connection must remain open.
+$ kubectl port-forward rabbitmq-0 15672:15672
+
+# Download the executable
+$ wget http://localhost:15672/cli/rabbitmqadmin
+
+# Allow the file to be executable
+$ chmod +x ./rabbitmqadmin
+
+# Optionally, move the executable to a BIN folder for easier execution.
+$ mv ./rabbitmqadmin ~/.local/bin/.
+
+```
+
+Optionally, add this line to your `~/.bash_profile` for bash completion
+```bash
+. <(rabbitmqadmin --bash-completion)
+```
 
 ## Azure Container Registry
 
-Put the following in your `~/.bashrc`
+Put the following in your `~/.bash_profile`
 
 ```bash
 # Get tags of a image inside ACR

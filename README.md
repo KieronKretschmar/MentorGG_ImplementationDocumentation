@@ -2,6 +2,9 @@
 
 Collection of code snippets and design practices.
 
+## Debugging
+- [Tools](Tools.md)
+
 ## Automation
 - [Pipelines](Pipelines.md)
 
