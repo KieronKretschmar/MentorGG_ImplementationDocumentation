@@ -8,6 +8,8 @@
 
 ## RabbitMq Admin CLI
 
+- [Management-CLI](https://www.rabbitmq.com/management-cli.html)
+
 ### Install
 
 ```shell
