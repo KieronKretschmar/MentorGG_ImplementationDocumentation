@@ -1,4 +1,4 @@
-# Debuging Cheatsheet
+# Debugging Cheatsheet / Tools
 
 ## Tools
 
