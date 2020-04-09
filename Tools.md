@@ -42,6 +42,15 @@ Put the following in your `~/.bash_profile`
 alias acr-get="az acr repository show-tags --n mentorgg --repository"
 # Get a list of images inside ACR
 alias acr-list="az acr repository list --name mentorgg"
+
+# docker aliases / functions
+function dbuild(){ docker build . -t mentorgg.azurecr.io/"$@";}
+function dpush(){ docker push mentorgg.azurecr.io/"$@";}
+function dbpush(){
+    dbuild "$@" && \
+    dpush "$@" && \
+    echo Pushed image to mentorgg.azurecr.io/"$@";
+}
 ```
 
 ### Usage
@@ -70,7 +79,16 @@ $ acr-get demodownloader
   "0.2.3"
 ]
 
+$ dbpush mentorinterface:1.1.1-pre
+$ dbuild democentral:1.2.3-pre
+$ dpush sharingcodegatherer:2.3.4-pre
+
 ```
+
+### Notes
+
+Please end all manually pushed images with `-pre` to signal the image is a pre-release.
+
 
 ## Commands
 
